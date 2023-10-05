@@ -1,0 +1,49 @@
+Introduction:
+Heart disease is a major health concern worldwide, and early detection and prevention are crucial in reducing the risk of heart attacks and other cardiovascular events.
+Machine learning models can be used to predict the likelihood of heart disease in patients based on various risk factors.
+In this project, we aim to build and evaluate several machine learning models to predict heart disease in patients based on their demographic and clinical characteristics.
+
+Data Cleaning and Encoding:
+The first step in our project was to clean and encode the data.
+We checked for missing values and replaced them with appropriate values.
+We also mapped the Gender column and replaced each Male with 0 and females with 1 so the model can read that data.
+We also encoded categorical variables using one-hot encoding and label encoding techniques.
+We encoded the work_type column using the OneHotEncoder to transform the work_type into 5 columns and dropped the work_column.
+We encoded the smoking_status using ordered number from 0 to 2 indicating the severity where 0 = never smokes and 2 = smokes.
+All the datatypes were also corrected and changed to int except the st_depression as it accepts floating values.
+We also removed any outliers in the data using the interquartile range method after using the box_plot to map the outliers.
+
+Data visualization: 
+Data visualization is an important step in any machine learning project as it helps to gain insights into the relationships between different variables and the target variable.
+In this project, we used various visualization techniques to visualize the data and identify the most important features for predicting heart disease.
+One of the most important relationships we found was between age and heart disease. 
+We plotted the distribution of age for each target class and found that the risk of heart disease increased with age.
+This is consistent with previous research that has shown that age is a major risk factor for heart disease.
+We also found a relationship between gender and heart disease.
+We plotted the distribution of gender for each target class and found that females were more likely to have heart disease than males.
+We also found a relationship between exercise-induced angina and chest pain type.
+We plotted the distribution of chest pain type for each target class and found that patients without excercise-angina were more likely to have chest pain than patients with excercise-angina.
+we found a relationship between thallium type and heart disease.
+We found that people with thallium = 7(with defects) are more likely to have a heart disease than other thallium types
+This is consistent with previous research that has shown that reversible defects(thallium = 7) are a major indicator of heart disease.
+There was a relation between chest pain type and heart disease,as it shows that people with chest pain type are more likely to have a heart disease.
+Another relation was found between chest pain type and gender.
+Females were more likely to have a chest pain than males.
+data visualization helped us to identify important relationships between different variables and the target variable. 
+These relationships can be used to develop more accurate machine learning models for predicting heart disease.
+
+Feature Selection:
+We used mutual information gain to select the most important features for predicting heart disease.
+We then used the SelectKBest function to select the top 12 features for our models.
+
+Model Building and Evaluation:
+We built several machine learning models, including logistic regression, random forest, decision tree, and SVM.
+We used grid search to find the best hyperparameters for the random forest model.
+We evaluated the models using various metrics such as accuracy, confusion matrix, classification report, and mean squared error.
+
+Conclusion:
+In conclusion, our project demonstrates the effectiveness of machine learning models in predicting heart disease in patients based on their demographic and clinical characteristics. 
+Our models achieved good accuracy in predicting heart disease, with the random forest model achieving the highest accuracy of 80%.
+The confusion matrix and classification report showed that our models had good precision and recall for both positive and negative cases.
+The mean squared error was also low, indicating that our models were able to predict heart disease with good accuracy.
+Further research can be done to improve the accuracy of the models and to identify additional risk factors for heart disease.
